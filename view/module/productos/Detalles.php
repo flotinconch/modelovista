@@ -16,12 +16,12 @@ if($id == '' || $token == ''){
 
 if($token == $token_tmp){
 
-  $sql = $con->prepare("SELECT count(id) FROM productoS WHERE id=? AND activo=1");
+  $sql = $con->prepare("SELECT count(id) FROM productos WHERE id=? AND activo=1");
 $sql->execute([$id]);
 if($sql->fetchColumn() > 0) {
 
 
-  $sql = $con->prepare("SELECT nombre, descripcion, precio, descuento FROM productoS WHERE id=? AND activo=1");
+  $sql = $con->prepare("SELECT nombre, descripcion, precio, descuento FROM productos WHERE id=? AND activo=1");
 $sql->execute([$id]);
 $row = $sql->fetch(PDO::FETCH_ASSOC);
 $nombre = $row ['nombre'];

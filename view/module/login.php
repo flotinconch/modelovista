@@ -19,11 +19,13 @@
             <span class="close-btn">
                 <img src="view/img/circle_close_delete_-128.png"></img>
             </span>
+           
 
             <form method="post">
                 <input type="text" name="txtUser" placeholder="User">
                 <input type="password" name="pass" placeholder="Password">
                 <input type="submit" value="Log in">
+                <a href="view/module/register.php" target="_blank">Registrarse</a>
             </form>
             <?php
                 if (isset($_POST['txtUser'])){
@@ -52,6 +54,7 @@
             <form>
                 <input type="email" name="email" placeholder="E-mail">
                 <a href="#" class="orange-btn">Get new password</a>
+    
             </form>
         </div>
         <script src="view/js/jquery-3.6.0.min.js"></script>

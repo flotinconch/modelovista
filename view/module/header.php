@@ -20,6 +20,24 @@
           </div>
         </nav>
         <a class="u-login u-preserve-proportions u-login-1" href="#" title="Página 1">Iniciar sesión</a>
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <span class="hidden-xs">Becerra</span>
+            </a>
+            <ul class="dropdown-menu">
+              <!-- Menu Footer-->
+              <li class="user-footer">
+                <div class="pull-right">
+                  <form method="post">
+                    <input type="hidden" name="txtSalir">
+                    <button type="submit" class="btn btn-default btn-flat">Cerrar</button>
+                  </form>
+                  <?php
+                    if (isset($_POST['txtSalir'])){
+                      $_SESSION['login'] = false;
+                      unset($_SESSION['login']);
+                      header('location: index.php');
+                    }
+                  ?>
       </div><style class="u-sticky-style" data-style-id="1a7a">.u-sticky-fixed.u-sticky-1a7a:before, .u-body.u-sticky-fixed .u-sticky-1a7a:before {
 borders: top right bottom left !important; border-color: #404040 !important; border-width: 2px !important
 }</style>
