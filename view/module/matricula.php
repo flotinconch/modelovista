@@ -1,6 +1,4 @@
-<link rel="stylesheet" href="view/css/css.css" media="screen">
 
-<link rel="stylesheet" href="view/cc/galeria.css" media="screen">
 
 
 <section class="u-align-center u-clearfix u-image u-section-1" id="sec-80e8" data-image-width="60" data-image-height="50">

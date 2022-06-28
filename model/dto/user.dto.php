@@ -7,6 +7,7 @@
         private $password;
         private $name;
         private $lastName;
+        private $email;
 
         /*GETTERS*/
         public function getCode(){
@@ -24,6 +25,9 @@
         public function getLastName(){
             return $this->lastName;
         }
+        public function getemail(){
+            return $this->email;
+        }
         /*SETTING */
         public function setCode ( $code ){
             $this -> code = $code;
@@ -39,6 +43,9 @@
         }
         public function setLastName ( $lastName ){
             $this -> lastName = $lastName;
+        }
+        public function setemail ( $email ){
+            $this -> email = $email;
         }
     }
 

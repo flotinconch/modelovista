@@ -17,11 +17,11 @@
           break;
 
       default:
-        include_once 'view/module/presentation.php';
+        include_once 'view/module/user.php';
         break;
     }
   } else {
-    include_once 'view/module/presentation.php';
+    include_once 'view/module/user.php';
    
   }
   include_once 'view/module/footer.php';

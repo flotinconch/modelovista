@@ -61,11 +61,7 @@ c5.5,0,9.9,4.5,9.9,9.9V73.3z"></path></svg></span>
 <!-- AdminLTE App -->
 <script src="view/dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="view/dist/js/demo.js"></script>
-<script src="view/js/validate.js"></script>
-<script src="view/js/crud.js"></script>
-<script src="view/js/ohsnap.js"></script>
-<script src="view/js/TweenMax.min.js"></script>
+
 
 <script class="u-script" type="text/javascript" src="view/js/jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="view/js/js.js" defer=""></script>  
