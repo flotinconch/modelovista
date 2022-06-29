@@ -2,7 +2,7 @@
 
 
 <header class="u-clearfix u-header u-sticky u-sticky-1a7a u-white u-header" id="sec-6138"  data-animation-duration="0" data-animation-delay="0" data-animation-direction=""><div class="u-clearfix u-sheet u-sheet-1">
-        <a href="inicio.html" class="u-image u-logo u-image-1" data-image-width="1363" data-image-height="1363">
+        <a href="index.php?ruta=usuario" class="u-image u-logo u-image-1" data-image-width="1363" data-image-height="1363">
           <img src="view/img/logo.jpg" class="u-logo-image u-logo-image-1">
         </a>
         <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
