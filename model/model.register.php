@@ -1,6 +1,6 @@
 <?php
 
-session_start();
+require_once 'conexion.php';
 
 if(isset($_POST['submit']))
 {
@@ -12,8 +12,6 @@ if(isset($_POST['submit']))
         $email = trim($_POST['email']);
         $password = trim($_POST['password']);
         $hashPassword = $password;
-        $options = array("cost"=>4);
-        $hashPassword = password_hash($password,PASSWORD_BCRYPT,$options);
         $date = date('Y-m-d H:i:s');
  
         if(filter_var($email, FILTER_VALIDATE_EMAIL))
@@ -25,7 +23,7 @@ if(isset($_POST['submit']))
             
             if($stmt->rowCount() == 0)
             {
-                $sql = "insert into user (user,name, lastname, email, `password`, created_at,updated_at) values(:vuser,:vname,:vlastname,:email,:pass,:created_at,:updated_at)";
+                $sql = "insert into user (user,name, lastname, email, `password`, created_at,updated_at) values(:vuser,:vname,:vlastname,:email,:password,:created_at,:updated_at)";
             
                 try{
                     $handle = $pdo->prepare($sql);
@@ -34,7 +32,7 @@ if(isset($_POST['submit']))
                         ':vname'=>$firstName,
                         ':vlastname'=>$lastName,
                         ':email'=>$email,
-                        ':pass'=>$hashPassword,
+                        ':password'=>$password,
                         ':created_at'=>$date,
                         ':updated_at'=>$date
                     ];
@@ -68,11 +66,11 @@ if(isset($_POST['submit']))
     {
         if(!isset($_POST['user']) || empty($_POST['user']))
         {
-            $errors[] = 'el Password es requerido';
+            $errors[] = 'el usuario es requerido';
         }
         else
         {
-            $valPassword = $_POST['user'];
+            $valUser = $_POST['user'];
         }
         if(!isset($_POST['name']) || empty($_POST['name']))
         {

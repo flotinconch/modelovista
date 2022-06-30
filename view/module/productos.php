@@ -1,6 +1,12 @@
 <?php
-require 'model/productos.model.php';
+require '../../controller/template.controller.php';
+require '../../model/conexion.php';
+require '../../model/productos.model.php';
+
 ?>
+
+
+
 <main>
   
   <div class="album py-5 bg-light" class="d-block w-100">
@@ -12,11 +18,11 @@ require 'model/productos.model.php';
               <?php
 
               $id = $row['id'];
-              $imagen = "../img/images/productos/$id/R.jpg";
+              $imagen = "images/productos/$id/R.jpg";
             
 
               if(!file_exists($imagen)){
-                $imagen = "../img/images/no-photo.jpg";
+                $imagen = "images/no-photo.jpg";
               }
 
               ?>
@@ -38,3 +44,4 @@ require 'model/productos.model.php';
   </div>
 </main>
    
+ 

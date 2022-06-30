@@ -63,6 +63,10 @@ c5.5,0,9.9,4.5,9.9,9.9V73.3z"></path></svg></span>
 <!-- AdminLTE for demo purposes -->
 
 
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"  integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"  crossorigin="anonymous">
+</script>
 <script class="u-script" type="text/javascript" src="view/js/jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="view/js/js.js" defer=""></script>  
 <script>

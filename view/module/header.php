@@ -10,7 +10,7 @@
             <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="index.php?ruta=usuario" style="padding: 10px 20px;">inicio</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="index.php?ruta=usuario#carousel_740a" data-page-id="52815737" style="padding: 10px 20px;">productos</a>
 <div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
-    <li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="view/module/productos/productos.php">Comprar</a>
+    <li class="u-nav-item"><a class="u-button-style u-nav-link u-white" href="index.php?ruta=aprendiz">Comprar</a>
 </li></ul>
 </div>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="index.php?ruta=matricula" style="padding: 10px 20px;">galeria</a>
