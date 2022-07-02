@@ -12,15 +12,18 @@
       case 'erase':
         include_once 'view/module/erase.php';
         break;
-        case 'matricula':
-          include_once 'view/module/matricula.php';
-          break;
-          case 'register':
-            include_once 'view/module/register.php';
-            break;
-            case 'aprendiz':
-              include_once 'view/module/aprendiz.php';
-              break;
+     case 'matricula':
+        include_once 'view/module/matricula.php';
+        break;
+     case 'register':
+        include_once 'view/module/register.php';
+        break;
+    case 'aprendiz':
+        include_once 'view/module/aprendiz.php';
+        break;
+    case 'detalles':
+        include_once 'view/module/detalles.php';
+        break;
 
       default:
         include_once 'view/module/user.php';

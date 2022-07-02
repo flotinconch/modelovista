@@ -14,6 +14,7 @@
     require_once 'model/model.register.php';
     require_once 'model/productos.model.php';
     
+    
     /////////////////////////////////////////////
     //                 CONEXION                //
     /////////////////////////////////////////////

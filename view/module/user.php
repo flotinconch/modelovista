@@ -1,5 +1,6 @@
 
-    <section class="u-clearfix u-image u-section-1" id="carousel_0de6" data-image-width="3762" data-image-height="2508">
+   
+   <section class="u-clearfix u-image u-section-1" id="carousel_0de6" data-image-width="3762" data-image-height="2508">
       <div class="u-clearfix u-sheet u-sheet-1">
         <div class="u-container-style u-group u-radius-50 u-shape-round u-white u-group-1">
           <div class="u-container-layout u-valign-middle u-container-layout-1">
@@ -27,7 +28,7 @@
                 <div class="u-container-style u-expanded-width u-group u-group-2">
                   <div class="u-container-layout u-valign-top u-container-layout-3">
                     <p class="u-align-left u-text u-text-3"> Flexacolor S.A.S esta enfocada en la fabricación de persianas, de la mejor calidad, variedad de tejidos y cumpliendo con tus necesidades.&nbsp;&nbsp;</p>
-                    <a href="productos/cortinas.html" data-page-id="309201651" class="u-btn u-btn-rectangle u-button-style u-palette-4-base u-btn-1">ver mas&nbsp;</a>
+                    <a href="index.php?ruta=aprendiz" data-page-id="309201651" class="u-btn u-btn-rectangle u-button-style u-palette-4-base u-btn-1">ver mas&nbsp;</a>
                   </div>
                 </div>
               </div>
@@ -43,7 +44,7 @@
                 <div class="u-container-style u-expanded-width u-group u-video-cover u-group-4">
                   <div class="u-container-layout u-valign-top u-container-layout-6">
                     <p class="u-align-left u-text u-text-5"> Fabricamos tapetes la cual es la primera línea de defensa contra la mugre; la mejor calidad y&nbsp;excelente presentación de sus pisos.</p>
-                    <a href="productos/tapetes.html" data-page-id="1544905028" class="u-btn u-btn-rectangle u-button-style u-palette-4-base u-btn-2"> ver mas</a>
+                    <a href="index.php?ruta=aprendiz" data-page-id="1544905028" class="u-btn u-btn-rectangle u-button-style u-palette-4-base u-btn-2"> ver mas</a>
                   </div>
                 </div>
               </div>
@@ -59,7 +60,7 @@
                 <div class="u-container-style u-expanded-width u-group u-video-cover u-group-6">
                   <div class="u-container-layout u-valign-top u-container-layout-9">
                     <p class="u-align-left u-text u-text-7"> Con nuestras películas de control solar es posible conservar un alto nivel de iluminación en los espacios con una alta reducción de calor.</p>
-                    <a href="productos/peliculas.html" data-page-id="1231517506" class="u-btn u-btn-rectangle u-button-style u-palette-4-base u-btn-3"> ver mas</a>
+                    <a href="index.php?ruta=aprendiz" data-page-id="1231517506" class="u-btn u-btn-rectangle u-button-style u-palette-4-base u-btn-3"> ver mas</a>
                   </div>
                 </div>
               </div>
