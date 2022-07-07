@@ -24,6 +24,12 @@
     case 'detalles':
         include_once 'view/module/detalles.php';
         break;
+    case 'pro':
+      include_once 'view/module/pro.php';
+      break;
+    case 'contacto':
+      include_once 'view/module/contacto.php';
+      break;
 
       default:
         include_once 'view/module/user.php';
