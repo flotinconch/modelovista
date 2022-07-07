@@ -23,8 +23,14 @@
     require_once 'model/conexion.php';
 
     /////////////////////////////////////////////
-    //                  LIBRARYS               //
+    //          funciones carrito              //
     /////////////////////////////////////////////
+    //require_once 'funciones/agregar_al_carrito.php';
+    //require_once 'funciones/eliminar_del_carrito.php';
+    //require_once 'funciones/eliminar_producto.php';
+    require_once 'funciones/funciones.php';
+    //require_once 'funciones/guardar_producto.php';
+    //require_once 'funciones/terminar_compra.php';
     
 
     /////////////////////////////////////////////

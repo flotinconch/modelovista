@@ -30,6 +30,9 @@
     case 'contacto':
       include_once 'view/module/contacto.php';
       break;
+      case 'carrito':
+        include_once 'view/module/ver_carrito.php';
+        break;
 
       default:
         include_once 'view/module/user.php';
