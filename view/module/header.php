@@ -21,20 +21,31 @@ require_once 'controller/numcar.php';
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="index.php?ruta=matricula" style="padding: 10px 20px;">galeria</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="index.php?ruta=contacto" data-page-id="52815737" style="padding: 10px 20px;">Contacto</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="index.php?ruta=carrito" style="padding: 10px 20px;">Carrito <span id="num_cart" class="badge bg-secondary"><?php echo $num_cart; ?></span></a>
-</li></ul>
-          </div>
-        </nav>
-        <a class="u-login u-preserve-proportions u-login-1" href="#" title="Página 1">Iniciar sesión</a>
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <span class="hidden-xs">cerrar</span>
-            </a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="index.php?ruta=pro" data-page-id="52815737" style="padding: 10px 20px;"> <?php
+        if (isset($_SESSION['login']) and $_SESSION['login'] == true ){
+                //SI LA SEESION ES CORRECTA MOSTRAR ESTO
+                echo "hola";
+                    }else{
+//SI LA SESION NO ESTA PON ESTO
+                    }
+                    ?></a>
+<div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10">
+<li class="user-footer">
+                <div class="pull-right">
+                  <form method="post">
+                    <input type="hidden" name="txtSalir">
+                    <button hrfe="cerrarsession.php" class="btn btn-default btn-flat">Cerrar</button>
+                  </form>
+                 
+                </div>
+              </li>
             <ul class="dropdown-menu">
               <!-- Menu Footer-->
               <li class="user-footer">
                 <div class="pull-right">
                   <form method="post">
-                    <input type="hidden" name="txtSalir">
-                    <button type="submit" class="btn btn-default btn-flat">Cerrar</button>
+                  <input type="hidden" name="txtSalir">
+                    <button hrfe="cerrarsession.php" class="btn btn-default btn-flat">Cerrar</button>
                   </form>
                   <?php
                     if (isset($_POST['txtSalir'])){
@@ -43,6 +54,22 @@ require_once 'controller/numcar.php';
                       header('location: index.php');
                     }
                   ?>
+</li></ul>
+</div>
+        <?php
+        if (isset($_SESSION['login']) and $_SESSION['login'] == true ){
+                //SI LA SEESION ES CORRECTA MOSTRAR ESTO
+                echo "hola";
+                    }else{
+//SI LA SESION NO ESTA PON ESTO
+                    }
+                    ?>
+                    </li>
+</li></ul>
+          </div>
+        </nav>
+        
+       
       </div><style class="u-sticky-style" data-style-id="1a7a">.u-sticky-fixed.u-sticky-1a7a:before, .u-body.u-sticky-fixed .u-sticky-1a7a:before {
 borders: top right bottom left !important; border-color: #404040 !important; border-width: 2px !important
 }</style>

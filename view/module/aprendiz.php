@@ -4,50 +4,70 @@ require 'model/productos.model.php';
 //include_once "funciones/agregar_al_carrito.php";
 $productos = obtenerProductos();
 ?>
-<?php foreach ($productos as $producto) { ?>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
   
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 <main>
   
-  <div class="album py-5 bg-light" class="d-block w-100">
+  
+
+
+
+<?php
+
+$productos = obtenerProductos();
+?>
+ <section class="hero is-info">
+        <div class="title">
+        <div class="container">
+                <h2 class="subtitle">
+                    Productos
+                </h2>
+                </div>
+        </div>
+    </section>
+<?php foreach ($productos as $producto) { ?>
+
+  
+    <div class="columns">
+        <div class="column is-full">
+            <div class="card">
+                <header class="card-header">
+                    <p class="card-header-title is-size-4">
+                        <?php echo $producto->nombre ?>
+                    </p>
+                    
+                </header>
+                <div class="card-content">
+                    <div class="content">
+                    <div class="album py-5 bg-light" class="d-block w-100">
     <div class="container">
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-      <?php foreach ($resultado as $row){ ?>
         <div class="col" >
           <div class="card shadow-sm">
-              <?php
-
-              $id = $row['id'];
-              $imagen = "view/img/images/productos/$id/R.jpg";
-            
-
-              if(!file_exists($imagen)){
-                $imagen = "view/img/images/no-photo.png";
-              }
-
-              ?>
+          <?php 
+                        $imagen = "view/img/images/productos/". ($producto->id) ."/r.jpg";
+                       // echo $imagen;
+                        if (!file_exists($imagen)) {
+                            $imagen = "view/img/images/no-photo.jpg";
+                        }
+                         ?>
+                         <br>
+                        <?php echo "$producto->descripcion \n"; ?>
             <img src="<?php echo $imagen; ?> " class="d-block w-100" alt="image" height="400" width="400">
-            <div class="card-body">
-              <p class="card-title"><?php echo $row['nombre'] ?></p>
-              <p class="card-text"><?php echo number_format( $row['precio'],2,'.',','); ?></p>
-              <div class="d-flex justify-content-between align-items-center">
-              <div class="container">
-  <button type="button" class="btn btn-primary mt-5" data-toggle="collapse" data-target="#demo">Descripcion</button>
-  <div id="demo" class="collapse">
-  <?php echo "tipo: "; echo $row['descripcion']; ?>
-  <br>
-  <?php echo "tono: "; echo $row['tono'];  ?>
-  <br>
-   <?php echo "patron: "; echo $row['patron'];  ?>
-   <br>
-   <?php echo "material: "; echo $row['tipo'];  ?>
-   <br>
-   <?php echo "detalles: "; echo $row['especificaciones'];  ?>
-
-  </div>
-</div>
+          
+            </div>
+            </div>
+          
+        </div>
+    </div>
+   
+                        <?php echo $producto->descripcion ?>
+                    </div>
+                    <h1 class="is-size-3">$<?php echo number_format($producto->precio, 2) ?></h1>
                     <?php if (productoYaEstaEnCarrito($producto->id)) { ?>
                         <form action="funciones/eliminar_del_carrito.php" method="post">
                             <input type="hidden" name="id_producto" value="<?php echo $producto->id ?>">
@@ -66,12 +86,10 @@ $productos = obtenerProductos();
                             </button>
                         </form>
                     <?php } ?>
-              </div>
+                </div>
             </div>
-          </div>
-          <?php } ?>
         </div>
     </div>
-  </div>
-   <?php } ?>
+<?php } ?>
+
 </main>
