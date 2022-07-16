@@ -20,11 +20,17 @@ require_once 'controller/numcar.php';
 </div>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="index.php?ruta=matricula" style="padding: 10px 20px;">galeria</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="index.php?ruta=contacto" data-page-id="52815737" style="padding: 10px 20px;">Contacto</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="index.php?ruta=carrito" style="padding: 10px 20px;">Carrito <span id="num_cart" class="badge bg-secondary"><?php echo $num_cart; ?></span></a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="index.php?ruta=carrito" style="padding: 10px 20px;">Carrito <span id="num_cart" class="badge bg-secondary"><?php
+                                                include_once "funciones/funciones.php";
+                                                $conteo = count(obtenerIdsDeProductosEnCarrito());
+                                                if ($conteo > 0) {
+                                                    printf("(%d)", $conteo);
+                                                }
+                                                ?></span></a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="index.php?ruta=pro" data-page-id="52815737" style="padding: 10px 20px;"> <?php
         if (isset($_SESSION['login']) and $_SESSION['login'] == true ){
                 //SI LA SEESION ES CORRECTA MOSTRAR ESTO
-                echo "hola";
+                echo "Usuario";
                     }else{
 //SI LA SESION NO ESTA PON ESTO
                     }
@@ -56,14 +62,7 @@ require_once 'controller/numcar.php';
                   ?>
 </li></ul>
 </div>
-        <?php
-        if (isset($_SESSION['login']) and $_SESSION['login'] == true ){
-                //SI LA SEESION ES CORRECTA MOSTRAR ESTO
-                echo "hola";
-                    }else{
-//SI LA SESION NO ESTA PON ESTO
-                    }
-                    ?>
+       
                     </li>
 </li></ul>
           </div>

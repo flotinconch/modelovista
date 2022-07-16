@@ -67,7 +67,8 @@ if (count($productos) <= 0) {
                     </tr>
                 </tfoot>
             </table>
-            <a href="funciones/terminar_compra.php" class="button is-success is-large"><i class="fa fa-check"></i>&nbsp;Terminar compra</a>
+          <?php require_once "funciones/pago.php"  ?>
+           
         </div>
     </div>
                     </section>
