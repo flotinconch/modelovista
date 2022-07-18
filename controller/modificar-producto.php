@@ -1,4 +1,5 @@
 <?php
+//va a buscar de la base de datos los datos de productos para modificarlos
 if (!empty($_POST["btnmodifico"])) {
     $nombre=$_POST["nombre"];
     $descripcion=$_POST["descripcion"];

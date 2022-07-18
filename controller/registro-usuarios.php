@@ -1,4 +1,5 @@
 <?php
+//va a traer los campos de la base de datos para insertar un nuevo usuario
     if (!empty($_POST["btnregistrar"])) {
         if (!empty($_POST["user"]) and !empty($_POST["password"])and !empty($_POST["name"])and !empty($_POST["lastname"])and !empty($_POST["email"])) {
             $usuario=$_POST["user"];

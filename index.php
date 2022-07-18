@@ -1,3 +1,7 @@
+<?php
+//esta es la vista general de los usuarios
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

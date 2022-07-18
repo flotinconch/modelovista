@@ -1,4 +1,5 @@
 <?php
+//va a traer los campos de la base de datos para insertar un nuevo producto
     if (!empty($_POST["btnregistro"])) {
         if (!empty($_POST["nombre"]) and !empty($_POST["descripcion"]) and !empty($_POST["precio"]) and !empty($_POST["activo"]) and !empty($_POST["id_categoria"]) and !empty($_POST["tono"]) and !empty($_POST["patron"]) and !empty($_POST["tipo"]) and !empty($_POST["especificaciones"])) {
             $nombre=$_POST["nombre"];
