@@ -1,0 +1,21 @@
+<?php
+if (!empty($_POST["btnmodifico"])) {
+    $nombre=$_POST["nombre"];
+    $descripcion=$_POST["descripcion"];
+    $precio=$_POST["precio"];
+    $activo=$_POST["activo"];
+    $id_categoria=$_POST["id_categoria"];
+    $tono=$_POST["tono"];
+    $patron=$_POST["patron"];
+    $tipo=$_POST["tipo"];
+    $especificaciones=$_POST["especificaciones"];
+    
+    $sql=$conexion->query("update productos set nombre='$nombre', descripcion='$descripcion', precio=$precio, activo=$activo, id_categoria=$id_categoria, tono='$tono', patron='$patron', tipo='$tipo', especificaciones='$especificaciones' where id=$id");
+    if ($sql==1) {
+        header('location:productos.php');
+    }else{
+        echo '<div class="alert alert-danger">Ha ocurrido un error al modificar los datos del producto :(</div>';
+        print('error');
+    } 
+}
+?>
