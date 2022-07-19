@@ -1,3 +1,4 @@
+<!-- aqui se llaman los css -->
 <!DOCTYPE html>
 <html style="font-size: 16px;">
   <head>
@@ -5,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="keywords" content="">
     <meta name="description" content="">
-    <title>inicio</title>
+    <title>flexacolor</title>
     <link rel="stylesheet" href="view/css/css.css" media="screen">
 <link rel="stylesheet" href="view/css/inicio.css" media="screen">
 <link rel="stylesheet" href="view/css/galeria.css" media="screen">

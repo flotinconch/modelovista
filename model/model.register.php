@@ -1,3 +1,4 @@
+<!-- se hacen las funciones para el registro de usuarios en la base de datos mediante el punto de registrarse -->
 <?php
 
 require_once 'conexion.php';

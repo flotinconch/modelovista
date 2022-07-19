@@ -1,4 +1,5 @@
 <?php
+//verificacion de contraseña y usuario
 class UserController{
     
     public function getVerifyPass( $user, $pass){

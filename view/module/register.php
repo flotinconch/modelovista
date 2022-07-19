@@ -1,4 +1,4 @@
-
+<!-- se llaman las funciones para registrar los usuarios y se muestra el register -->
 <?php
 
 require_once('../../model/conexion.php');

@@ -1,3 +1,4 @@
+<!-- se hace la conexion a la base de datos -->
 <?php
 $dsn = 'mysql:dbname=flexacolor;host=localhost';
 $user = 'root';

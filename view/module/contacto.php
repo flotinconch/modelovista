@@ -1,3 +1,4 @@
+<!-- la pagina de contacto -->
 <section class="u-align-center u-clearfix u-grey-5 u-section-3" id="carousel_3455">
       <div class="u-clearfix u-sheet u-sheet-1">
         <h2 class="u-text u-text-1">contacto</h2>
@@ -43,29 +44,10 @@
                     <div class="u-layout-col">
                       <div class="u-container-style u-layout-cell u-left-cell u-size-60 u-layout-cell-4">
                         <div class="u-container-layout u-container-layout-4">
-                          <h3 class="u-text u-text-default u-text-8">tienes alguna duda o sugerencia&nbsp;</h3>
+                         
                           <div class="u-form u-form-1">
                             <form action="#" method="POST" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" style="padding: 0;" source="email" name="form">
-                              <div class="u-form-group u-form-name">
-                                <label for="name-3d90" class="u-form-control-hidden u-label">Name</label>
-                                <input type="text" placeholder="INGRESA TU NOMBRE COMPLETO" id="name-3d90" name="name" class="u-input u-input-rectangle u-white" required="">
-                              </div>
-                              <div class="u-form-email u-form-group">
-                                <label for="email-3d90" class="u-form-control-hidden u-label">Email</label>
-                                <input type="email" placeholder="INGRESA UN CORREO VALIDO " id="email-3d90" name="email" class="u-input u-input-rectangle u-white" required="">
-                              </div>
-                              <div class="u-form-group u-form-message">
-                                <label for="message-3d90" class="u-form-control-hidden u-label">Message</label>
-                                <textarea placeholder="ESCRIBIR" rows="4" cols="50" id="message-3d90" name="message" class="u-input u-input-rectangle u-white" required=""></textarea>
-                              </div>
-                              <div class="u-align-left u-form-group u-form-submit">
-                                <a href="#" class="u-border-2 u-border-grey-dark-1 u-btn u-btn-rectangle u-btn-submit u-button-style u-none u-btn-1">Enviar<br>
-                                </a>
-                                <input type="submit" value="submit" class="u-form-control-hidden">
-                              </div>
-                              <div class="u-form-send-message u-form-send-success"> Gracias por escribirnos su mensaje sera atentido lo mas pronto posible. </div>
-                              <div class="u-form-send-error u-form-send-message"> error al enviar el mensaje por favor intentalo de nuevo. </div>
-                              <input type="hidden" value="" name="recaptchaResponse">
+                             
                             </form>
                           </div>
                         </div>
@@ -74,10 +56,10 @@
                   </div>
                   <div class="u-size-30">
                     <div class="u-layout-col">
-                      <div class="u-container-style u-layout-cell u-right-cell u-size-60 u-layout-cell-5">
+                      <div class="u-container-style u-layout-cell u-right-cell u-size-60 u-layout-cell-10">
                         <div class="u-container-layout u-container-layout-5">
                           <h3 class="u-text u-text-default u-text-9">ESTAMOS AQUI</h3>
-                          <div class="u-grey-light-2 u-map u-map-1">
+                          <div class="u-grey-light-3 u-map u-map-3">
                             <div class="embed-responsive">
                               <iframe class="embed-responsive-item" src="//maps.google.com/maps?output=embed&amp;q=carrera%2074%20N%C2%AA%2040-18&amp;z=10&amp;t=m" data-map="JTdCJTIycG9zaXRpb25UeXBlJTIyJTNBJTIybWFwLWFkZHJlc3MlMjIlMkMlMjJhZGRyZXNzJTIyJTNBJTIyY2FycmVyYSUyMDc0JTIwTiVDMiVBQSUyMDQwLTE4JTIyJTJDJTIyem9vbSUyMiUzQTEwJTJDJTIydHlwZUlkJTIyJTNBJTIycm9hZCUyMiUyQyUyMmxhbmclMjIlM0ElMjIlMjIlN0Q="></iframe>
                             </div>

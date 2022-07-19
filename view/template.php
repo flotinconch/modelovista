@@ -6,20 +6,17 @@
 
   if (isset($_GET['ruta'])){ //Si variable ruta existe
     switch ($_GET['ruta']) {
-      case 'usuario':
-        include_once 'view/module/user.php';
+      case 'inicio':
+        include_once 'view/module/inicio.php';
         break;
-      case 'erase':
-        include_once 'view/module/erase.php';
-        break;
-     case 'matricula':
-        include_once 'view/module/matricula.php';
+     case 'galeria':
+        include_once 'view/module/galeria.php';
         break;
      case 'register':
         include_once 'view/module/register.php';
         break;
-    case 'aprendiz':
-        include_once 'view/module/aprendiz.php';
+    case 'productos':
+        include_once 'view/module/productos.php';
         break;
     case 'detalles':
         include_once 'view/module/detalles.php';
@@ -35,11 +32,11 @@
         break;
 
       default:
-        include_once 'view/module/user.php';
+        include_once 'view/module/inicio.php';
         break;
     }
   } else {
-    include_once 'view/module/user.php';
+    include_once 'view/module/inicio.php';
    
   }
   include_once 'view/module/footer.php';

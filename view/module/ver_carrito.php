@@ -1,3 +1,4 @@
+<!-- de aqui se llaman las funciones de ver carrito y se las de bajar del carrito y comprar  -->
 <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.1/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
 
@@ -16,15 +17,15 @@ if (count($productos) <= 0) {
                 <h2 class="subtitle">
                     Visita la tienda para agregar productos a tu carrito
                 </h2>
-                <a href="index.php?ruta=aprendiz" class="button is-warning">Ver productos</a>
+                <a href="index.php?ruta=productos" class="button is-warning">Ver productos</a>
             </div>
         </div>
     </section>
 <?php } else { ?>
-     <section class="hero is-info">
-        <div class="hero-body">
-            <div class="container">
-                <h1 class="title">
+     <section class="hero is-info p-3 my-3 bg-gray text-white">
+        <div class="hero-body p-3 my-3 bg-gray text-white">
+            <div class="container p-3 my-3 bg-gray text-white">
+                <h1 class="title text-dark">
                     Mis productos
                 </h1>
             <table class="table">

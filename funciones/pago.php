@@ -1,3 +1,5 @@
+<!-- se utilizan las funciones para llamar el id y el precio de los productos que se subieron al carrito
+ y asi ponerlos en el metodo de pago -->
 <?php
 require_once "funciones.php";
     ?>

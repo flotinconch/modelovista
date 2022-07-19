@@ -1,3 +1,4 @@
+<!-- el pie de pagina -->
 <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-c4c0"><div class="u-clearfix u-sheet u-sheet-1">
         <p class="u-small-text u-text u-text-variant u-text-1">siguenos en nuestras redes&nbsp;</p>
         <div class="u-social-icons u-spacing-10 u-social-icons-1">
@@ -17,7 +18,7 @@ c5.5,0,9.9,4.5,9.9,9.9V73.3z"></path></svg></span>
           </a>
         </div>
       </div></footer>
-
+<!-- aqui se llaman los js -->
   <!-- Add the sidebar's background. This div must be placed
        immediately after the control sidebar -->
   <div class="control-sidebar-bg"></div>
