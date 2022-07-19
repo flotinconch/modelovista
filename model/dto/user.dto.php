@@ -1,3 +1,4 @@
+<!-- se le da la funcion a las variables -->
 <?php
 
     class User{

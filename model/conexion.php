@@ -1,3 +1,4 @@
+<!-- se hace la conexion a la base de datos -->
 <?php
 $dsn = 'mysql:dbname=flexacolor;host=localhost';
 $user = 'root';
@@ -53,3 +54,37 @@ catch(PDOException $e)
     //$objCon = new Conexion();
     //$objCon -> getConect();
 ?>
+
+<?php
+
+class Database {
+
+    private $hostname = "localhost";
+    private $database = "flexacolor";
+    private $username = "root";
+    private $password = "";
+    private $charset = "utf8";
+
+    function conectar()
+    {
+        try{
+        $conexion = "mysql:host=" . $this->hostname . "; dbname=" . $this->database . "; 
+        charset=" . $this->charset;
+        $options = [
+            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+            PDO::ATTR_EMULATE_PREPARES => false
+
+        ];
+        $pdo = new PDO ($conexion, $this-> username, $this->password, $options);
+
+        return $pdo;
+        } catch(PDOException $e){
+            echo 'Error conexion' . $e->getMessage();
+            exit;
+        }
+
+    }
+}
+
+?>
+

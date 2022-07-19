@@ -1,6 +1,5 @@
 
 
-
 <section class="u-align-center u-clearfix u-image u-section-1" id="sec-80e8" data-image-width="60" data-image-height="50">
       <div class="u-clearfix u-sheet u-sheet-1">
         <h2 class="u-text u-text-default u-text-1">GALERIA</h2>

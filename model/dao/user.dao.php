@@ -1,3 +1,4 @@
+<!-- se llaman las variables y se hace la validacion del login -->
 <?php
     //require_once "../model/conexion.php";
     //require_once "../model/dto/user.dto.php";

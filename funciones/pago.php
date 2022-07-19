@@ -1,3 +1,32 @@
+<!-- se utilizan las funciones para llamar el id y el precio de los productos que se subieron al carrito
+ y asi ponerlos en el metodo de pago -->
+<?php
+require_once "funciones.php";
+    ?>
+    <?php
+
+$productos = obtenerProductosEnCarrito();
+if (count($productos) <= 0) {
+?>
+
+<?php } else { ?>
+     
+            <table class="table">
+               
+                    <?php
+                    $total = 0;
+                    foreach ($productos as $producto) {
+                        $total += $producto->precio;
+                    ?>
+                 
+                        <?php } ?>
+               
+                    <?php
+                    $var = json_encode($total);
+                    
+                    ?>
+                    
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,9 +38,10 @@
 <body>
 
     <script src="https://www.paypal.com/sdk/js?client-id=AVn2S8pFrPWuBCmwpCJ_xwXfPzcQlIWQHIT9KY0ScOiWbiPKMqRNMMUdt2i4g5_7yOGsX5_Snamk_DGP&currency=USD"></script>
-
+   
     <div id="paypal-button-container"></div>
     <script>
+        
       paypal.Buttons({
         style:{
             color:'blue',
@@ -22,14 +52,14 @@
             return actions.order.create({
                 purchase_units:[{
                     amount:{
-                        value: '100'
+                        value:   ("<?php echo $total ?>")
                     }
                 }]
             });
         },
         onApprove: function(data, actions){
             actions.order.capture().then(function(detalles){
-                window.location.href="completado.html"
+                window.location.href="funciones/completado.html"
                 console.log(detalles);
             });
         },
@@ -38,6 +68,7 @@
             console.log(data)
         }
       }).render('#paypal-button-container');
+      <?php } ?>
     </script>
   </body>
 </html>
