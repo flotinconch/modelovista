@@ -1,5 +1,6 @@
 <?php
-include 'modelo/conexion.php';
+//este codigo es la vista que se tien al modificar un usuario
+include '../modelo/conexion.php';
 $id = $_GET["id"];
 $sql = $conexion->query(" select * from user where Code = $id ");
 ?>
@@ -22,7 +23,7 @@ $sql = $conexion->query(" select * from user where Code = $id ");
         <form class="col-4 p-3 m-auto" method="POST">
             <h3 class="text-center text-secondary">editar usuario</h3>
             <?php
-                include 'controller/modificar.php';
+                include '../controller/modificar.php';
             ?>
             <input type="hidden" name="id" value="<?= $id ?>">
             <div class="mb-3">
@@ -47,7 +48,7 @@ $sql = $conexion->query(" select * from user where Code = $id ");
             </div>
 
             <button type="submit" class="btn btn-primary" name="btnmodificar" value="ok">Modificar</button>
-            <a href="index.php">Ir al inicio</a>
+            <a href="index.php?ruta=usuario">Ir al inicio</a>
 
         </form>
     <?php }

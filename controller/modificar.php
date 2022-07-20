@@ -9,9 +9,9 @@ if (!empty($_POST["btnmodificar"])) {
 
     $sql=$conexion->query("update user set user='$usuario', Password='$password', name='$name',lastname='$lastname', email='$email'  where Code=$id");
     if ($sql==1) {
-        header('location:index.php');
+        header('location:../index.php?ruta=usuario');
     }else{
-        echo '<div class="alert alert-danger">Ha ocurrido un error al modificar los datos del usuario :(</div>';
+       
     } 
 }
 ?>

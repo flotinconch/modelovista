@@ -14,12 +14,12 @@
 
             $sql=$conexion->query(" insert into productos(nombre, descripcion, precio, activo, id_categoria, tono, patron, tipo, especificaciones)values('$nombre', '$descripcion', $precio, $activo, $id_categoria, '$tono', '$patron', '$tipo', '$especificaciones') ");
             if ($sql==1) {
-                echo '<div class="alert alert-success">Producto Registrado Correctamente</div>';
+               
             }else{
-                echo '<div class="alert alert-danger">El Producto no ha podido ser registrado :(</div>';
+                
             }
         }else{
-            echo '<div class="alert alert-warning">Algunos de los campos estan vacios</div>';
+           
         }
 
     }

@@ -1,5 +1,6 @@
 <?php
-include 'modelo/conexion.php';
+//este codigo es la vista que se tien al modificar un producto
+include '../modelo/conexion.php';
 $id = $_GET["id"];
 $sql = $conexion->query(" select * from productos where id = $id ");
 ?>
@@ -22,7 +23,7 @@ $sql = $conexion->query(" select * from productos where id = $id ");
         <form class="col-4 p-3 m-auto" method="POST">
             <h3 class="text-center text-secondary">Editar producto</h3>
             <?php
-                include 'controller/modificar-producto.php';
+                include '../controller/modificar-producto.php';
             ?>
             <input type="hidden" name="id" value="<?= $id ?>">
             <div class="mb-3">
@@ -62,7 +63,7 @@ $sql = $conexion->query(" select * from productos where id = $id ");
                 <input type="text" class="form-control" name="especificaciones" value="<?= $datos->especificaciones?>">
             </div>
             <button type="submit" class="btn btn-primary" name="btnmodifico" value="ok">Modificar</button>
-            <a href="productos.php">Ir al inicio</a>
+            <a href="index.php?ruta=productos">Ir al inicio</a>
 
         </form>
     <?php }

@@ -1,3 +1,6 @@
+<?php
+//esta es la vista general de los productos
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +15,7 @@
 
 </head>
 <header>
-    <a href="index.php">usuarios</a>
+    <a href="index.php?ruta=usuario">usuarios</a>
 </header>
 <body>
     <script>
@@ -104,7 +107,8 @@
                             <td><?= $datos->especificaciones?></td>
                             <td>
                                 <a href="vistamodificarproducto.php?id=<?= $datos->id ?>" class="btn btn-small btn-warning"><i class="fa-solid fa-pen-to-square"></i></a>
-                                <a onclick="return eliminar()"href="productos.php?id=<?= $datos->id?>" class="btn btn-small btn-danger"><i class="fa-solid fa-trash"></i></a>
+                                <a onclick="return eliminar()" href="productos.php?=id<?= $datos->id?>"
+                                 class="btn btn-small btn-danger"><i class="fa-solid fa-trash"></i></a>
                             </td>
                         </tr>
 

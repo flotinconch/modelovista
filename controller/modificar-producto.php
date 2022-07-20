@@ -13,9 +13,9 @@ if (!empty($_POST["btnmodifico"])) {
     
     $sql=$conexion->query("update productos set nombre='$nombre', descripcion='$descripcion', precio=$precio, activo=$activo, id_categoria=$id_categoria, tono='$tono', patron='$patron', tipo='$tipo', especificaciones='$especificaciones' where id=$id");
     if ($sql==1) {
-        header('location:productos.php');
+        header('location:../index.php?ruta=productos');
     }else{
-        echo '<div class="alert alert-danger">Ha ocurrido un error al modificar los datos del producto :(</div>';
+      
         print('error');
     } 
 }

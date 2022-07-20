@@ -9,10 +9,10 @@
   if (isset($_GET['ruta'])){ //Si variable ruta existe
     switch ($_GET['ruta']) {
       case 'usuario':
-        include_once '../index.php';
+        include_once 'index_1.php';
         break;
       case 'productos':
-        include_once 'productos.php';
+        include_once 'view/productos.php';
         break;
         case 'matricula':
           include_once 'view/module/matricula.php';
@@ -25,9 +25,9 @@
                 break; 
     
 
-      default:
-        include_once '../index.php';
-        break;
+     
     }
+  }else{
+    include_once 'index_1.php';
   }
 ?>
