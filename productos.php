@@ -106,9 +106,8 @@
                             <td><?= $datos->tipo?></td>
                             <td><?= $datos->especificaciones?></td>
                             <td>
-                                <a href="vistamodificarproducto.php?id=<?= $datos->id ?>" class="btn btn-small btn-warning"><i class="fa-solid fa-pen-to-square"></i></a>
-                                <a onclick="return eliminar()" href="productos.php?=id<?= $datos->id?>"
-                                 class="btn btn-small btn-danger"><i class="fa-solid fa-trash"></i></a>
+                                <a href="view/vistamodificarproducto.php?id=<?= $datos->id ?>" class="btn btn-small btn-warning"><i class="fa-solid fa-pen-to-square"></i></a>
+                                <a onclick="return eliminar()"href="productos.php?id=<?= $datos->id?>" class="btn btn-small btn-danger"><i class="fa-solid fa-trash"></i></a>
                             </td>
                         </tr>
 

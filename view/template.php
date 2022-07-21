@@ -12,7 +12,7 @@
         include_once 'index_1.php';
         break;
       case 'productos':
-        include_once 'view/productos.php';
+        include_once 'productos.php';
         break;
         case 'matricula':
           include_once 'view/module/matricula.php';
