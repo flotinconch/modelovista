@@ -21,12 +21,12 @@
     //                 CONEXION                //
     /////////////////////////////////////////////
     require_once 'model/conexion.php';
-
+   // require_once 'la-carta.php';
     /////////////////////////////////////////////
     //          funciones carrito              //
     /////////////////////////////////////////////
     
-    require_once 'funciones/funciones.php';
+   
    
     
 

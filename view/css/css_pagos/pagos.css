@@ -1,0 +1,25 @@
+
+        .container {
+            padding: 20px;
+        }
+
+        .table {
+            width: 65%;
+            float: left;
+        }
+
+        .shipAddr {
+            width: 30%;
+            float: left;
+            margin-left: 30px;
+        }
+
+        .footBtn {
+            width: 95%;
+            float: left;
+        }
+
+        .orderBtn {
+            float: right;
+        }
+   

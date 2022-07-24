@@ -20,14 +20,8 @@
 </div>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="index.php?ruta=galeria" style="padding: 10px 20px;">galeria</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="index.php?ruta=contacto" data-page-id="52815737" style="padding: 10px 20px;">Contacto</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="index.php?ruta=carrito" style="padding: 10px 20px;">Carrito <span id="num_cart" class="badge bg-secondary"><?php
-                                                include_once "funciones/funciones.php";
-                                                $conteo = count(obtenerIdsDeProductosEnCarrito());
-                                                if ($conteo > 0) {
-                                                    printf("(%d)", $conteo);
-                                                }
-                                                ?></span></a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="index.php?ruta=pro" data-page-id="52815737" style="padding: 10px 20px;"> <?php
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="index.php?ruta=carrito" style="padding: 10px 20px;">Carrito </a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="" data-page-id="52815737" style="padding: 10px 20px;"> <?php
         if (isset($_SESSION['login']) and $_SESSION['login'] == true ){
                 //SI LA SEESION ES CORRECTA MOSTRAR ESTO
                 echo "Usuario";

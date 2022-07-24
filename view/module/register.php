@@ -77,12 +77,7 @@ require_once('../../model/model.register.php');
                                                         <input class="form-control py-4" name="password" id="inputPassword" type="password" placeholder="Enter password" />
                                                     </div>
                                                 </div>
-                                                <div class="col-md-7">
-                                                    <div class="form-group">
-                                                        <label class="small mb-1" for="inputConfirmPassword">Confirme el  Password</label>
-                                                        <input class="form-control py-4" name="repassword" id="inputConfirmPassword" type="password" placeholder="Confirm password" />
-                                                    </div>
-                                                </div>
+                                                
                                             </div>
                                             <button type="submit" name="submit" class="btn btn-primary">Registrarse</button>
                                             <div class="card-footer text-center">

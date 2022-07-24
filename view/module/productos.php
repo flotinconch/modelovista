@@ -1,57 +1,36 @@
-<!-- aqui se muestran los productos y se llaman las funciones para que se suban los productos al carrito
-se bajen del carrito y obtenga los productos -->
 <?php
-
-//include_once "funciones/funciones.php";
-//include_once "funciones/agregar_al_carrito.php";
-$productos = obtenerProductos();
+include_once "view/css/css_pagos/productos.css";
+include 'model/Configuracion.php';
 ?>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
-  
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-<main>
-  
-  
-
-
-
-<?php
-
-$productos = obtenerProductos();
-?>
- <section class="hero is-info">
-        <div class="title">
-        <div class="container  text-white">
-                <h2 class="subtitle">
-                    Productos
-                </h2>
-                </div>
-        </div>
-    </section>
-<?php foreach ($productos as $producto) { ?>
-
-  
-    <div class="columns">
-        <div class="column is-full">
-            <div class="card">
-                <header class="card-header">
-                    <p class="card-header-title is-size-4">
-                       <strong> <?php echo $producto->nombre ?> </strong>
-                    </p>
-                    
-                </header>
-                <div class="card-content">
-                    <div class="content">
-                    <div class="album py-5 bg-light" class="d-block w-100">
+<body>
     <div class="container">
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-        <div class="col" >
-          <div class="card shadow-sm">
-          <?php 
-                        $imagen = "view/img/images/productos/". ($producto->id) ."/r.jpg";
+        <div class="panel panel-default">
+            <div class="panel-heading">
+
+                <ul class="nav nav-pills">
+                    <li role="presentation" class="active"><a href=" index.php?ruta=productos">Inicio</a></li>
+                    <li role="presentation"><a href=" index.php?ruta=carrito">Carrito de Compras</a></li>
+                    
+                   
+                </ul>
+            </div>
+
+            <div class="panel-body">
+                <h1>Tienda de Productos</h1>
+                <a href=" index.php?ruta=carrito" class="cart-link" title="Ver Carta"><i class="glyphicon glyphicon-shopping-cart"></i></a>
+                <div id="products" class="row list-group">
+                    <?php
+                    //get rows query
+                    $query = $db->query("SELECT * FROM productos ORDER BY id DESC LIMIT 10");
+                    if ($query->num_rows > 0) {
+                        while ($row = $query->fetch_assoc()) {
+                    ?>
+                            <div class="item col-lg-4">
+                                <div class="thumbnail">
+                                    <div class="caption">
+                                    <?php 
+                        $imagen = "view/img/images/productos/". ($row["id"]) ."/r.jpg";
                        // echo $imagen;
                         if (!file_exists($imagen)) {
                             $imagen = "view/img/images/no-photo.jpg";
@@ -60,47 +39,34 @@ $productos = obtenerProductos();
                          <br>
                         
             <img src="<?php echo $imagen; ?> " class="d-block w-100" alt="image" height="400" width="400">
-          
-            </div>
-            </div>
-          
-        </div>
-    </div>
-   
-    <strong>  <?php echo"descripcion: ";?> </strong> <?php echo $producto->descripcion ?>
-    <br>
-    <strong>  <?php echo"tono: ";?> </strong> <?php echo $producto->tono ?>
-    <br>
-    <strong>  <?php echo"patron: ";?> </strong> <?php echo $producto->patron ?>
-    <br>
-    <strong>  <?php echo"tipo: ";?> </strong> <?php echo $producto->tipo ?>
-    <br>
-    <strong>  <?php echo"especificaciones: ";?> </strong> <?php echo $producto->especificaciones ?>
-    
-                    </div>
-                    <h1 class="is-size-3">$<?php echo number_format($producto->precio, 2) ?></h1>
-                    <?php if (productoYaEstaEnCarrito($producto->id)) { ?>
-                        <form action="funciones/eliminar_del_carrito.php" method="post">
-                            <input type="hidden" name="id_producto" value="<?php echo $producto->id ?>">
-                            <span class="button is-success">
-                                <i class="fa fa-check"></i>&nbsp;En el carrito
-                            </span>
-                            <button class="button is-danger">
-                                <i class="fa fa-trash-o"></i>&nbsp;Quitar
-                            </button>
-                        </form>
-                    <?php } else { ?>
-                        <form action="funciones/agregar_al_carrito.php" method="post">
-                            <input type="hidden" name="id_producto" value="<?php echo $producto->id ?>">
-                            <button class="button is-primary">
-                                <i class="fa fa-cart-plus"></i>&nbsp;Agregar al carrito
-                            </button>
-                        </form>
+                                        <h4 class="list-group-item-heading"><b><?php echo $row["nombre"]; ?></b></h4>
+                                        <p class="list-group-item-text"><b><?php echo "descripcion: " ?></b><?php echo $row["descripcion"]; ?></p>
+                                        <p class="list-group-item-text"><b><?php echo "tono: " ?></b><?php echo $row["tono"]; ?></p>
+                                        <p class="list-group-item-text"><b><?php echo "tipo: " ?></b><?php echo $row["tipo"]; ?></p>
+                                        <p class="list-group-item-text"><b><?php echo "patron: " ?></b><?php echo $row["patron"]; ?></p>
+                                        <p class="list-group-item-text"><b><?php echo "especificaciones: " ?></b><?php echo $row["especificaciones"]; ?></p>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <p class="lead"><?php echo '$' . $row["precio"] . ' COP'; ?></p>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <a class="btn btn-success" href="AccionCarta.php?action=addToCart&id=<?php echo $row["id"]; ?>">Enviar al Carrito</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php }
+                    } else { ?>
+                        <p>Producto(s) no existe.....</p>
                     <?php } ?>
                 </div>
             </div>
         </div>
-    </div>
-<?php } ?>
+        
+        <!--Panek cierra-->
 
-</main>
+    </div>
+</body>
+
+</html>

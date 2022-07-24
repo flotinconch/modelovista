@@ -1,6 +1,6 @@
 <!-- se hace la conexion a la base de datos -->
 <?php
-$dsn = 'mysql:dbname=flexacolor;host=localhost';
+$dsn = 'mysql:dbname=bye;host=localhost';
 $user = 'root';
 $password = '';
  
@@ -30,7 +30,7 @@ catch(PDOException $e)
         public function __construct(){
             $this -> host   ="localhost";
             $this -> drive  ="mysql";
-            $this -> base   ="flexacolor";
+            $this -> base   ="bye";
             $this -> user   ="root";
             $this -> pass   ="";
             $this -> url    = $this -> drive . ":host=" 
@@ -60,7 +60,7 @@ catch(PDOException $e)
 class Database {
 
     private $hostname = "localhost";
-    private $database = "flexacolor";
+    private $database = "bye";
     private $username = "root";
     private $password = "";
     private $charset = "utf8";

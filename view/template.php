@@ -27,9 +27,16 @@
     case 'contacto':
       include_once 'view/module/contacto.php';
       break;
-      case 'carrito':
-        include_once 'view/module/ver_carrito.php';
-        break;
+    case 'carrito':
+      include_once 'view/module/vercarta.php';
+      break;
+    case 'pagos':
+      include_once 'view/module/pagos.php';
+      break;
+    case 'orden':
+      include_once 'view/module/OrdenExito.php';
+      break;
+  
 
       default:
         include_once 'view/module/inicio.php';
