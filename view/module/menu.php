@@ -7,17 +7,12 @@
         <li class="header">Main Navigation</li>
 
         <!--<li class="inutil1 treeview" onclick="validateSidebarAp(event)">-->
-        <li class="inutil1">
-          <a href="aprendiz">
-            <i class="fa fa-pencil"></i> 
-            <span>Aprendiz 😫</span>
-          </a>
-        </li>
+      
         <!--<li class="inutil2 treeview" onclick="validateSidebarMa(event)">-->
         <li class="inutil2">
           <a href="matricula">
             <i class="fa fa-mortar-board"></i>
-            <span>Matricula 😀</span>
+            <span>Productos 😀</span>
           </a>
         </li>
         <!--<li class="inutil3 treeview" onclick="validateSidebarUs(event)">-->

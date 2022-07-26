@@ -1,83 +1,62 @@
 <?php
-    require_once("../../controller/matriculaController.php");
-    require_once("../../model/dao/matDao.php");
-    require_once("../../model/dto/matDto.php");
-    require_once("../../model/conexion.php");
+require('../fpdf/fpdf.php');
 
-    class Reporte{
-        private $pdf;
+class PDF extends FPDF
+{
+// Cabecera de página
+function Header()
+{
+    // Logo
+    $this->Image('../img/logo.jpg',10,8,33);
+    // Arial bold 15
+    $this->SetFont('Arial','B',12);
+    // Movernos a la derecha
+    $this->Cell(80);
+    // Título
+    $this->Cell(30,10,'usuarios',1,0,'C');
+    // Salto de línea
+    $this->Ln(20);
 
-        public function __construct(){
-            include 'vendor/fpdf.php';
-            $this -> pdf = new FPDF();
-            $this -> pdf->AddPage();
-        }
+ 
+    $this->cell(10,10, 'id',1,0,'C',0);
+    $this->cell(30,10, 'nombre',1,0,'C',0);
+    $this->cell(100,10, 'descripcion',1,0,'C',0);
+    $this->cell(20,10, 'precio',1,0,'C',0);
+    $this->cell(20,10, 'tono',1,1,'C',0);
+   
 
-        //Encabezado de la pagina
-        public function headReport() {
-            $this -> pdf->SetFont('Arial','B',16);
+}
 
-            // Logo
-            $this -> pdf ->Image('../img/a.jpg',20,5,35);
-            // Arial bold 15
-            $this -> pdf ->SetFont('Arial','B',15);
-            // Movernos a la derecha
-            $this -> pdf ->Cell(80);
-            // Título
-            $this -> pdf ->Cell(30,10,'Reporte Matricula',0,0,'C');
-            // Salto de línea
-            $this -> pdf ->Ln(30);
-        }
+// Pie de página
+function Footer()
+{
+    // Posición: a 1,5 cm del final
+    $this->SetY(-15);
+    // Arial italic 8
+    $this->SetFont('Arial','I',8);
+    // Número de página
+    $this->Cell(0,10,utf8_decode('Pagina ').$this->PageNo().'/{nb}',0,0,'C');
+}
+}
+require '../../model/conexion.php';
+$consulta = "SELECT * FROM productos";
+$resultado =$mysqli->query($consulta);
 
-        //Info de la pagina
-        public function viewAll(){
-            $this -> pdf->SetFont('Arial','B',10);
 
-            try {
-                $objDtoMatricula = new Matricula();
-                $objDaoMatricula = new MatriculaModel($objDtoMatricula);
-                $respon = $objDaoMatricula -> mIdSearchAllMatricula() -> fetchAll(); //La funcion fetchAll es para convertir todos los datos en un arreglo asociativo
+$pdf = new PDF();
+$pdf ->aliasNbPages();
+$pdf->AddPage();
+$pdf->SetFont('Arial','',10);
 
-            } catch (PDOException $e) {
-                echo "Error en la creacion del controlador para mostrar todas las matriculas pa ". $e -> getMessage();
-            }
+while($row = $resultado->fetch_assoc()){
+    $pdf->cell(10,10, $row['id'],1,0,'C',0);
+    $pdf->cell(30,10, $row['nombre'],1,0,'C',0);
+    $pdf->cell(100,10, $row['descripcion'],1,0,'C',0);
+    $pdf->cell(20,10, $row['precio'],1,0,'C',0);
+    $pdf->cell(20,10, $row['tono'],1,1,'C',0);
+  
+}
 
-            // Cabecera
-            $header = array('id', 'nombre', 'descripcion', 'precio', 'tono', 'patron', 'tipo');
-            foreach($header as $col)
-                $this-> pdf -> Cell(27,10,$col,1,0,'C');
-                $this-> pdf -> Ln(10);
 
-            foreach ($respon as $key => $value) {
-                $this -> pdf->Cell(27,10, $value['id'],1,0,'C');
-                $this -> pdf->Cell(27,10, $value['nombre'],1,0,'C');
-                $this -> pdf->Cell(27,10, $value['descripcion'],1,0,'C');
-                $this -> pdf->Cell(27,10, $value['precio'],1,0,'C');
-                $this -> pdf->Cell(27,10, $value['tono'],1,0,'C');
-                $this -> pdf->Cell(27,10, $value['patron'],1,0,'C');
-                $this -> pdf->Cell(27,10, $value['tipo'],1,0,'C');
-                $this -> pdf -> Ln(10);
-            }      
-
-        } 
-
-        // Pie de página
-        function fooReport() {
-            $this -> pdf -> AliasNbPages();
-
-            // Posición: a 1,5 cm del final
-            $this -> pdf ->SetY(265);
-            // Arial italic 8
-            $this -> pdf ->SetFont('Arial','I',8);
-            // Número de página
-            $this -> pdf ->Cell(0,10,'Page '.$this-> pdf -> PageNo().'/{nb}',0,0,'C');
-
-            $this -> pdf->Output();
-        }
-    }
-
-    $view = new Reporte();
-    $view -> headReport();
-    $view -> viewAll();
-    $view -> fooReport();
+$pdf->Output();
 ?>

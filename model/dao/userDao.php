@@ -113,7 +113,7 @@
                 $stmt -> bindParam(3, $this -> lastname, PDO::PARAM_STR);
                 $stmt -> bindParam(4, $this -> user,    PDO::PARAM_STR);
                 $stmt -> bindParam(5, $this -> password, PDO::PARAM_STR);
-                $stmt -> bindParam(6, $this -> email,     PDO::PARAM_INT);
+                $stmt -> bindParam(6, $this -> email,     PDO::PARAM_STR);
                 $stmt -> bindParam(7, $this -> phone,     PDO::PARAM_STR);
                 $stmt -> bindParam(8, $this -> address, PDO::PARAM_STR);
               

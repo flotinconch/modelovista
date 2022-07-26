@@ -5,8 +5,7 @@
         private $descripcion;
         private $precio;
         private $tono;
-        private $patron;
-        private $tipo;
+        
 
         public function __construct($objDtoMatricula)
         {
@@ -15,13 +14,12 @@
             $this -> descripcion = $objDtoMatricula -> getNombreCentro();
             $this -> precio = $objDtoMatricula -> getCosto();
             $this -> tono = $objDtoMatricula -> getEstado();
-            $this -> patron = $objDtoMatricula -> getCodigoPrograma();
-            $this -> tipo = $objDtoMatricula -> getCodigoAprendiz();
+            
         }
 
         public function mIdInsertMatricula()
         {
-            $sql = "CALL spInsertMatricula(?, ?, ?, ?, ?, ?);";
+            $sql = "CALL spInsertMatricula(?, ?, ?, ?);";
             $estado = false;
             try {
                 $objCon = new Conexion();
@@ -30,8 +28,6 @@
                 $stmt -> bindParam(2, $this -> descripcion,            PDO::PARAM_STR);
                 $stmt -> bindParam(3, $this -> precio,                   PDO::PARAM_STR);
                 $stmt -> bindParam(4, $this -> tono,                  PDO::PARAM_STR);
-                $stmt -> bindParam(5, $this -> patron,          PDO::PARAM_INT);
-                $stmt -> bindParam(6, $this -> tipo,          PDO::PARAM_INT);
                 $estado = $stmt -> execute();
             } catch (PDOexception $e) {
                 echo "Error al insertar Matricula " . $e -> getMessage();
@@ -74,7 +70,7 @@
 
         public function mIdUpdateMatricula()
         {
-            $sql = "CALL spUpdateMatricula(?, ?, ?, ?, ?, ?, ?);";
+            $sql = "CALL spUpdateMatricula(?, ?, ?, ?, ?);";
             $estado = false;
 
             try {
@@ -85,8 +81,7 @@
                 $stmt -> bindParam(3, $this -> descripcion,            PDO::PARAM_STR);
                 $stmt -> bindParam(4, $this -> precio,                   PDO::PARAM_STR);
                 $stmt -> bindParam(5, $this -> tono,                  PDO::PARAM_STR);
-                $stmt -> bindParam(6, $this -> patron,          PDO::PARAM_INT);
-                $stmt -> bindParam(7, $this -> tipo,          PDO::PARAM_INT);
+                
                 $estado = $stmt -> execute();
             } catch (PDOexception $e) {
                 echo "Error al modificar matricula " . $e -> getMessage();

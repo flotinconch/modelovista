@@ -8,17 +8,11 @@
       case 'usuario':
           include_once("view/module/user.php");
         break;
-      case 'aprendiz':
-          include_once("view/module/aprendiz.php");
-        break;
       case 'matricula':
           include_once("view/module/matricula.php");
         break;
       case 'erase':
           include_once("view/module/erase.php");
-          break;
-      case 'eraseAprendiz':
-          include_once("view/module/eraseAprendiz.php");
           break;
       case 'eraseMatricula':
           include_once("view/module/eraseMatricula.php");

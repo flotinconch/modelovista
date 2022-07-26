@@ -70,24 +70,7 @@
             </div>
             <br>
           <!-- ROW 3 CONTIENE CODIGO PROGRAMA Y APRENDIZ-->
-            <div class="row">
-              <div class="col-lg-6 col-xs-6">
-                <!-- small box -->
-                <div class="input-group">
-                  <span class="input-group-addon">patron</span>
-                  <input id="patron" name="patron" type="text" class="form-control">
-                </div>
-              </div>
-              <!-- ./col -->
-              <div class="col-lg-6 col-xs-6">
-                <!-- small box -->
-                <div class="input-group">
-                  <span class="input-group-addon">tipo</span>
-                  <input id="tipo" name="tipo" type="text" class="form-control">
-                </div>
-              </div>
-              <!-- ./col -->
-            </div>
+           
         <!-- /.box-body -->
         <div class="box-footer">
           <button class="btn btn-app bg-blue" type="submit" onclick="validateMatricula(event)">
@@ -103,7 +86,7 @@
       <?php
         if (isset($_POST['nombre'])){
           $objCtrMatricula = new MatriculaController();
-          $objCtrMatricula -> setInsertMatricula($_POST['nombre'], $_POST['descripcion'], $_POST['precio'], $_POST['tono'], $_POST['patron'], $_POST['tipo']);
+          $objCtrMatricula -> setInsertMatricula($_POST['nombre'], $_POST['descripcion'], $_POST['precio'], $_POST['tono']);
         }
       ?>
 
@@ -132,8 +115,6 @@
                   <th class="text-center">descripcion</th>
                   <th class="text-center">precio</th>
                   <th class="text-center">tono</th>
-                  <th class="text-center">Codigo Programa</th>
-                  <th class="text-center">Codigo Aprendiz</th>
                   <th class="text-center">Acciones</th>
                 </tr>
               </thead>
@@ -156,8 +137,6 @@
                           <td>'. $value["DESCRIPCION"] .'</td>
                           <td>'. $value["PRECIO"] .'</td>
                           <td>'. $value["TONO"] .'</td>
-                          <td>'. $value["PATRON"] .'</td>
-                          <td>'. $value["TIPO"] .'</td>
                           <td class="text-center">
                             <button class="btn btn-social-icon btn-google" onclick="eraseMat(this.parentElement.parentElement)"><i class="fa fa-trash"></i></button>
                             <button class="btn btn-social-icon bg-blue" onclick="getDataMat(this.parentElement.parentElement)" data-toggle="modal" data-target="#myModal"><i class="fa fa-pencil-square-o"></i></button>
@@ -238,26 +217,9 @@
           
     
         <!-- ROW 3 MOD CONTIENE CODIGO PROGRAMA Y APRENDIZ-->
-          <div class="row">
-              <div class="col-lg-6 col-xs-6">
-                <!-- small box -->
-                <div class="input-group">
-                  <span class="input-group-addon">patron</span>
-                  <input id="patronm" name="patronm" type="text" class="form-control">
-                </div>
-              </div>
-              <!-- ./col -->
-              <div class="col-lg-6 col-xs-6">
-                <!-- small box -->
-                <div class="input-group">
-                  <span class="input-group-addon">tipo</span>
-                  <input id="tipom" name="tipom" type="text" class="form-control">
-                </div>
-              </div>
-              <!-- ./col -->
-            </div>
+          
         </form>
-        </div>
+        
 
         <!-- Modal footer -->
         <div class="modal-footer">
@@ -267,7 +229,8 @@
           <?php
             if (isset($_POST['nombrem'])){
               $objCtrMatricula = new MatriculaController();
-              $objCtrMatricula -> setUpdateMatricula($_POST['idm'],$_POST['nombrem'], $_POST['descripcionm'], $_POST['preciom'], $_POST['tonom'], $_POST['patronm'], $_POST['tipom']);
+              $objCtrMatricula -> setUpdateMatricula($_POST['idm'],$_POST['nombrem'], $_POST['descripcionm'], $_POST['preciom'], $_POST['tonom']);
+              echo "<script>location.href = 'http://localhost/crud/index.php?ruta=matricula';</script>";
             }
           ?>
           <button type="button" class="btn btn-google bg-red" data-dismiss="modal">

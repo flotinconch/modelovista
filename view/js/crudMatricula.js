@@ -45,8 +45,7 @@ function getDataMat(obj) {
     let descripcion = obj.children[2].innerHTML;
     let precio = obj.children[3].innerHTML;
     let tono = obj.children[4].innerHTML;
-    let patron = obj.children[5].innerHTML;
-    let tipo = obj.children[6].innerHTML;
+
 
 
     document.getElementById('idm').value = id;
@@ -54,8 +53,7 @@ function getDataMat(obj) {
     document.getElementById('descripcionm').value = descripcion;
     document.getElementById('preciom').value = precio;
     document.getElementById('tonom').value = tono;
-    document.getElementById('patronm').value = patron;
-    document.getElementById('tipom').value = tipo;
+
     
 }
 

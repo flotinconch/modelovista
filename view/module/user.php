@@ -294,6 +294,7 @@
             if (isset($_POST['inamem'])){
               $objCtrUser = new UserController();
               $objCtrUser -> setUpdateUser($_POST['icodem'], $_POST['inamem'], $_POST['iapem'], $_POST['iuserm'], $_POST['icontram'],$_POST['iemailm'], $_POST['iphonem'],  $_POST['iaddressm']);
+              echo "<script>location.href = 'http://localhost/crud/index.php?ruta=usuario';</script>";
             }
           ?>
           <button type="button" class="btn btn-google bg-red" data-dismiss="modal">

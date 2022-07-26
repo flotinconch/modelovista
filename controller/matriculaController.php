@@ -1,15 +1,14 @@
 <?php
     class MatriculaController{
 
-        public function setInsertMatricula($nombre,$descripcion,$precio,$tono,$patron,$tipo){
+        public function setInsertMatricula($nombre,$descripcion,$precio,$tono){
             try {
                 $objDtoMatricula = new Matricula();
                 $objDtoMatricula -> setFechaMatricula($nombre);
                 $objDtoMatricula -> setNombreCentro($descripcion);
                 $objDtoMatricula -> setCosto($precio);
                 $objDtoMatricula -> setEstado($tono);
-                $objDtoMatricula -> setCodigoPrograma($patron);
-                $objDtoMatricula -> setCodigoAprendiz($tipo);
+
 
                 $objDaoMatricula = new MatriculaModel($objDtoMatricula);
 
@@ -43,7 +42,7 @@
             return $respon;
         }
 
-        public function setUpdateMatricula($id,$nombre,$descripcion,$precio,$tono,$patron,$tipo){
+        public function setUpdateMatricula($id,$nombre,$descripcion,$precio,$tono){
             try {
                 $objDtoMatricula = new Matricula();
                 $objDtoMatricula -> setCodigoMatricula($id);
@@ -51,8 +50,7 @@
                 $objDtoMatricula -> setNombreCentro($descripcion);
                 $objDtoMatricula -> setCosto($precio);
                 $objDtoMatricula -> setEstado($tono);
-                $objDtoMatricula -> setCodigoPrograma($patron);
-                $objDtoMatricula -> setCodigoAprendiz($tipo);
+         
 
                 $objDaoMatricula = new MatriculaModel($objDtoMatricula);
 
