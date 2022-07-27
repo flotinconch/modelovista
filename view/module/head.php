@@ -7,6 +7,7 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <title>flexacolor</title>
+    <link rel="stylesheet" href="view/css/register.css" media="screen">
     <link rel="stylesheet" href="view/css/css.css" media="screen">
 <link rel="stylesheet" href="view/css/inicio.css" media="screen">
 <link rel="stylesheet" href="view/css/galeria.css" media="screen">
